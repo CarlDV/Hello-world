@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, world.</title>
-    <link rel="stylesheet" href="test.css">
-</head>
-
-<body>
-    <div class="container">
-        <h1 id="hello-world">Hello World</h1>
-    </div>
-
+    <title>autism</title>
     <script>
-        const helloWorld = document.getElementById("hello-world");
-
-        helloWorld.addEventListener("click", function () {
-            helloWorld.classList.add("explode");
-
-            setTimeout(() => {
-                helloWorld.classList.remove("explode");
-                helloWorld.classList.add("reset-form");
-            }, 3000);
-
-            setTimeout(() => {
-                helloWorld.classList.remove("reset-form");
-            }, 5000);
-        });
+        function flashbang() {
+            setInterval(() => {
+                let color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+                document.body.style.backgroundColor = color;
+            }, 0.1);
+        }
     </script>
+</head>
+<body onload="flashbang()">
 </body>
-
 </html>
